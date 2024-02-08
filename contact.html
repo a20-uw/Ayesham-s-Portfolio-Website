@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="eng-ca">
+
+<head>
+    <title>contact page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="contact">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">About Me</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+
+        <!-- logo button -->
+        <a href="index.html">
+            <img src="images/logo-transparent.png" alt="Picture of my logo" id="logo">
+        </a>
+
+        <!-- text -->
+        <h2>Let's Connect </h2>
+        <h3>Leave a Message</h3>
+
+        <p>FOR INQUIRIES AND PROJECT REALTED QUESTIONS</p>
+        <p><a href="mailto:a2raheel@uwaterloo.ca" class="email-link">A2RAHEEL@UWATERLOO.CA</a></p>
+
+        <!-- decorative images -->
+        <div class="image-container">
+            <img src="images/PhonePic1.jpg" alt="Picture of black iPhone on pink blanket">
+        </div>
+
+        <div class="second-image-container">
+            <img src="images/PhonePic2.jpg" alt="Picture of iphone screen with pink widgets">
+        </div>
+
+        <!-- table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Monitored</th>
+                    <th>Social Media</th>
+                    <th>Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1-2 Business Days</td>
+                    <td>Instagram</td>
+                    <td><a href="https://www.instagram.com/ayesham_r?igsh=bDJuMDdleDZ0eDdq&utm_source=qr" target="_blank">ayesham_r</a>
+                </tr>
+                <tr>
+                    <td>2-3 Business Days</td>
+                    <td>TikTok</td>
+                    <td><a href="https://www.tiktok.com/@ayesham.6?_t=8jhyleHvqTd&_r=1" target="_blank">ayesham.6</a>
+                </tr>
+                <tr>
+                    <td>3-4 Business Days</td>
+                    <td>Linkedin</td>
+                    <td><a href="https://ca.linkedin.com/in/ayesham-raheel-b5bb4b2a5" target="_blank">Ayesham Raheel</a></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <!-- contact form -->
+        <!-- Code adapted from: https:https://www.w3schools.com/howto/howto_css_contact_form.asp
+        Name: How-to Contact form
+        Description: Creates a contact form
+        Date retrieved: Jan. 27, 2024 -->
+        <!-- adapted code starts -->
+        <div id="contact-form" class="container">
+            <form action="/submit-form.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your first name.." required>
+
+                <label for="lname" class="lname-label">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write something.." required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <!-- adapted code ends -->
+
+    </div>
+</body></html>

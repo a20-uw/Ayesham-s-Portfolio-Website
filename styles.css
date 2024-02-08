@@ -1,0 +1,658 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'ArialNova', sans-serif;
+    color: white;
+    margin: 0;
+    background-image: url(images/light%202.gif);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-y: scroll;
+}
+
+/* My different fonts */
+@font-face {
+    font-family: 'ArialNova';
+    src: url('fonts/ArialNova.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ArialNova-Light';
+    src: url('fonts/ArialNova-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ArialNova-Bold';
+    src: url('fonts/ArialNova-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BR';
+    src: url('fonts/Buongiorno Rastellino.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'LeJourSerif';
+    src: url('fonts/Le Jour Serif.ttf') format('truetype');
+}
+
+/* Formatting for landing page */
+#landing {
+    padding: 20px;
+    text-align: right;
+    min-height: 100vh;
+}
+
+#landing a {
+    text-decoration: none;
+    color: white;
+    margin-left: 40px;
+    font-style: italic;
+    display: inline-block;
+}
+
+#landing h1 {
+    position: absolute;
+    font-size: 220px;
+    margin-top: 250px;
+    margin-left: 450px;
+}
+
+#landing h2 {
+    position: absolute;
+    font-size: 115px;
+    margin-top: 400px;
+    margin-left: 650px;
+}
+
+/* Formatting home page logo button */
+#logo {
+    position: absolute;
+    top: -2px;
+    left: 20px;
+    width: 120px;
+    height: auto;
+}
+
+/* Formatting arrow button */
+#arrow-button {
+    position: absolute;
+    text-align: center;
+    /* Center the image horizontally */
+    margin-top: -130px;
+    margin-left: 800px;
+}
+
+#arrow-button img {
+    width: 70px;
+    height: auto;
+}
+
+#about-me {
+    position: absolute;
+    background-color: #1E1C1C;
+    padding: 20px;
+    width: 1920px;
+    height: 900px;
+}
+
+#about-me img {
+    float: left;
+    margin-top: -770px;
+    margin-left: 180px;
+    margin-right: 30px;
+    width: 600px;
+    height: auto;
+}
+
+#about-me .profile-border {
+    top: 30px;
+    margin-left: 150px;
+    width: 600px;
+    height: 800px;
+    background-color: #F7CDD0;
+}
+
+#about-me h1 {
+    position: absolute;
+    font-size: 210px;
+    line-height: 1px;
+    margin-right: 50px;
+    margin-left: 900px;
+    margin-top: -600px;
+}
+
+#about-me h2 {
+    position: absolute;
+    width: 500px;
+    font-size: 95px;
+    margin-right: 50px;
+    margin-left: 1050px;
+    margin-top: -580px;
+}
+
+#about-me p {
+    position: absolute;
+    width: 440px;
+    font-size: 18px;
+    margin-left: 1050px;
+    margin-top: -450px;
+    text-align: justify;
+}
+
+/* Formatting my work button */
+#portfolio-button {
+    background: transparent;
+    display: inline-block;
+    position: absolute;
+    text-decoration: none;
+    color: #F7CDD0;
+    padding: 10px 20px;
+    border: 2px solid #F7CDD0;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 240px;
+    margin-top: -160px;
+    width: 80px;
+    height: 20px;
+}
+
+#portfolio-button:hover {
+    background-color: #F7CDD0;
+    color: #1E1C1C;
+}
+
+/* Formatting portfolio page*/
+#portfolio {
+    padding: 20px;
+    text-align: right;
+    background-color: #1E1C1C;
+    height: 6800px;
+}
+
+#portfolio a {
+    text-decoration: none;
+    color: white;
+    margin-left: 40px;
+    margin-right: 0;
+    font-style: italic;
+    display: inline-block;
+}
+
+#portfolio h2 {
+    position: absolute;
+    font-size: 50px;
+    margin-top: 130px;
+    margin-left: 60px;
+    font-weight: normal;
+}
+
+#portfolio p {
+    position: absolute;
+    width: 400px;
+    font-size: 14px;
+    margin-left: 60px;
+    margin-top: 210px;
+    text-align: left;
+    font-family: 'ArialNova-Light', sans-serif;
+}
+
+/* slideshow */
+/* Code copied from: https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp
+Name: Image Gallery With Horizontal Scroll
+Description: creates an image gallery with a horizontal scrollbar using CSS.
+Date retrieved: Jan. 29, 2024 */
+#slideshow h2 {
+    margin-top: -150px;
+    margin-left: 0px;
+}
+
+#slideshow p {
+    margin-top: -80px;
+    margin-left: 0px;
+}
+
+div.scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    margin-top: 250px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+div.scroll-container img {
+    padding: 10px;
+    width: 500px;
+    height: 600px;
+}
+/* copied code ends */
+
+/* photo grid */
+/* Code adapted from: https://www.w3schools.com/howto/howto_js_image_grid.aspAuthor: w3schools.com
+Name: Image Grid
+Description: Creates a photo grid
+Date retrieved: Jan. 29, 2024 */
+/* adapted code starts */
+.photo-grid-container {
+    margin-top: 240px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.row {
+    display: flex;
+    margin: 0 -10px;
+}
+
+.column {
+    flex: 22.22%;
+    padding: 0 10px;
+}
+
+.column img {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+}
+/* adapted code ends */
+
+/* Formatting for services page */
+#services {
+    height: 1700px;
+    background-color: #1E1C1C;
+    margin-top: 0px;
+    padding: 20px 64px;
+    text-align: right;
+}
+
+#services a {
+    text-decoration: none;
+    color: white;
+    margin-left: 40px;
+    font-style: italic;
+    display: inline-block;
+}
+
+#services h2 {
+    position: absolute;
+    font-size: 50px;
+    margin-top: 130px;
+    margin-left: -25px;
+    font-weight: normal;
+}
+
+#services p {
+    position: absolute;
+    width: 400px;
+    font-size: 14px;
+    margin-left: -25px;
+    margin-top: 210px;
+    text-align: left;
+    font-family: 'ArialNova-Light', sans-serif;
+}
+
+/* hover box */
+/* Code adapted from: https:https://codepen.io/ArnaudBalland/pen/vGZKLr
+Name: Simple Image Overlay Hover Effects
+Description: creates a text overlay over an image
+Date retrieved: Jan. 27, 2024 */
+.container {
+    position: absolute;
+    margin-top: -1450px;
+    margin-left: 40px;
+    max-width: 500px;
+    max-height: 500px;
+    width: 50%;
+}
+
+.container .title {
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content {
+    position: absolute;
+    max-width: 500px;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.content .content-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay {
+    opacity: 1;
+}
+
+.content-image {
+    width: 500px;
+    height: 500px;
+}
+
+.content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 320px;
+    left: 250px;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details {
+    top: 250px;
+    opacity: 1;
+}
+
+.content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+
+.content-details p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.fadeIn-bottom {
+    top: 50%;
+}
+
+/* Hover box 2 */
+.container.second {
+    margin-top: -1450px;
+    margin-left: 590px;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+/* Hover box 3*/
+.container.third {
+    margin-top: -1450px;
+    margin-left: 1140px;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+/* Hover box 4 */
+.container.fourth {
+    margin-top: -900px;
+    margin-left: 40px;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+/* Hover box 5 */
+.container.fifth {
+    margin-top: -900px;
+    margin-left: 590px;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+/* Hover box 6 */
+.container.sixth {
+    margin-top: -900px;
+    margin-left: 1140px;
+    max-width: 500px;
+    max-height: 500px;
+}
+/* adapted code ends */
+
+
+/* Formatting for my contact page */
+#contact {
+    height: 1700px;
+    background-color: #1E1C1C;
+    margin-top: 0px;
+    padding: 20px;
+    text-align: right;
+}
+
+#contact a {
+    text-decoration: none;
+    color: white;
+    margin-left: 40px;
+    margin-right 10px;
+    font-style: italic;
+    display: inline-block;
+}
+
+#contact .email-link {
+    margin-top: 25px;
+    margin-left: 0px;
+    font-style: normal;
+    color: #F7CDD0;
+}
+
+#contact .email-link:hover {
+    text-decoration: underline;
+}
+
+#contact h2 {
+    position: absolute;
+    font-size: 90px;
+    margin-top: 150px;
+    margin-left: 60px;
+    font-weight: normal;
+}
+
+#contact h3 {
+    position: absolute;
+    font-weight: normal;
+    font-family: 'LeJourSerif', serif;
+    position: absolute;
+    font-size: 85px;
+    text-align: left;
+    margin-left: 700px;
+    margin-top: 960px;
+}
+
+#contact p {
+    position: absolute;
+    width: 500px;
+    font-size: 18px;
+    margin-left: 60px;
+    margin-top: 280px;
+    text-align: left;
+    font-family: 'ArialNova-Light', sans-serif;
+}
+
+#contact .image-container {
+    margin-top: 180px;
+    margin-left: 1000px;
+    position: absolute;
+}
+
+#contact .image-container img {
+    width: 490px;
+    height: auto;
+}
+
+#contact .second-image-container {
+    margin-top: 980px;
+    margin-left: 100px;
+    position: absolute;
+}
+
+#contact .second-image-container img {
+    width: 450px;
+    height: 500px;
+}
+
+/* Formatting the contact social media table */
+table {
+    width: 800px;
+    height: 400px;
+    margin-top: 400px;
+    margin-left: 60px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 20px;
+}
+
+th {
+    font-family: 'ArialNova-Bold', sans-serif;
+}
+
+/* Formatting the contact form */
+/* Code adapted from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_contact_form
+Name: How TO - Contact Form
+Description: creates a contact form
+Date retrieved: Jan. 27, 2024 */
+/* adapted code starts */
+#contact-form {
+    width: 900px;
+    margin-top: 300px;
+    margin-left: 700px;
+    position: absolute;
+}
+
+/* Contact form labels*/
+#contact-form label {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+    font-family: 'ArialNova', sans-serif;
+    color: #747272;
+}
+
+#contact-form .lname-label {
+    display: block;
+    margin-top: -20px;
+    margin-left: 420px;
+    text-align: left;
+    font-family: 'ArialNova', sans-serif;
+    color: #747272;
+    position: absolute;
+}
+
+#contact-form label[for="message"] {
+    /* Your styles here */
+    margin-top: 60px;
+}
+
+#contact-form label[for="email"] {
+    margin-top: 70px
+}
+
+/* contact form input boxes */
+#contact-form input[type="text"],
+#contact-form input[type="email"] {
+    width: 85%;
+    padding: 10px;
+    display: block;
+    text-align: left;
+    margin-top: 5px;
+    font-family: 'ArialNova', sans-serif;
+    color: #747272;
+    box-sizing: border-box;
+    border: 1px solid #747272;
+    border-radius: 5px;
+    font-family: 'ArialNova', sans-serif;
+    height: 40px;
+    position: absolute;
+}
+
+#contact-form input#fname {
+    width: 60%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-right: 600px;
+    box-sizing: border-box;
+    border: 1px solid #747272;
+    border-radius: 5px;
+    font-family: 'ArialNova', sans-serif;
+    height: 40px;
+    position: absolute;
+}
+
+#contact-form input#lname {
+    width: 75%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 420px;
+    box-sizing: border-box;
+    border: 1px solid #747272;
+    border-radius: 5px;
+    font-family: 'ArialNova', sans-serif;
+    height: 40px;
+    position: absolute;
+}
+
+#contact-form textarea {
+    width: 160%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #747272;
+    border-radius: 5px;
+    font-family: 'ArialNova', sans-serif;
+    height: 100px;
+    position: absolute;
+}
+
+#contact-form input[type="submit"] {
+    background: transparent;
+    display: inline-block;
+    text-decoration: none;
+    color: #F7CDD0;
+    padding: 10px 20px;
+    border: 2px solid #F7CDD0;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 130px;
+    margin-right: 900px;
+    width: 80px;
+    height: 40px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#contact-form input[type="submit"]:hover {
+    background-color: #F7CDD0;
+    color: #1E1C1C;
+}
+/* adapted code ends */
+
+/* Use The cursive font for Heading 1 */
+h1 {
+    font-family: 'BR', cursive;
+    color: #F7CDD0;
+    font-weight: normal;
+}
+
+/* Use Le Jour Serif font for Heading 2 */
+h2 {
+    font-family: 'LeJourSerif', serif;
+}
+
+/* Use ArialNova font for paragraphs */
+p {
+    font-family: 'ArialNova', sans-serif;
+}
